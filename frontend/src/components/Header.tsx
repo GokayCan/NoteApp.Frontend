@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
 
 const Header = () => {
-  return <div>notes</div>;
-};
 
-export default Header;
+    return (
+        <div className="app-header">
+            <h1>Note List</h1>
+        </div>
+    )
+}
+
+export default Header

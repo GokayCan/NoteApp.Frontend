@@ -1,13 +1,20 @@
 import "./App.css";
-import Header from "./components/Header";
-import NotesListPage from "./pages/NotesListPage";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Layout from "./components/Layout";
+import { Suspense, lazy } from "react";
+import routes from "./routes/routes";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <NotesListPage />
-    </div>
+    <Suspense fallback={<h1>...</h1>}>
+      <RouterProvider router={routes}></RouterProvider>
+    </Suspense>
   );
 }
 
